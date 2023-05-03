@@ -578,21 +578,26 @@ fn main() {
     //         color: String::from("Green")
     //     }
     // ];
-
     // fn print_name(name: &str) {
     //     println!("name = {:?}", name);
     // }
-
     // fn print_color(color: &str) {
     //     println!("color = {:?}", color);
     // }
-
     // for person in people {
     //     if person.age <= 10 {
     //         print_name(&person.name);
     //         print_color(&person.color);
     //     }
     // }
+
+    // Type Annotations 
+    // They are required for funciton signatures
+    // Types are usually inferred by the compiler, but can also be specified in code, by explicit type annotation
+
+    // Example of type annotation for vectors
+    // let letters = vec!['a', 'b', 'c'];
+    // let numbers = vec![1, 2, 3];
 
 
 }

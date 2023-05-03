@@ -37,6 +37,7 @@ _Rust_ helps developers write fast software that’s memory-efficient. It’s a 
 -   impl, self Keywords
 -   Vectors
 -   Strings
+-   Type Annotations & Generics
 
 <br/>
 
