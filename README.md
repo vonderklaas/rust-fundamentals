@@ -72,3 +72,7 @@ let book = Book {
 display_page_count(&book);
 display_page_rating(&book);
 ```
+
+Rust is quite different than JavaScript. JavaScript tries to find variables or objects not in use and automatically clears them from memory. This is called garbage collection. The language abstracts the developer from thinking about manual memory management. With Rust, developers have more control over memory allocation without it being as painful as C++.
+
+Rust uses a relatively unique memory management approach that incorporates the idea of memory ‘ownership’. Basically, Rust keeps track of who can read and write to memory. It knows when the program is using memory and immediately frees the memory once it is no longer needed. It enforces memory rules at compile-time, making it virtually impossible to have runtime memory bugs. You do not need to manually keep track of memory. The compiler takes care of it.
