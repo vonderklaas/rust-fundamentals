@@ -591,13 +591,70 @@ fn main() {
     //     }
     // }
 
-    // Type Annotations 
+    // * Type Annotations 
     // They are required for funciton signatures
     // Types are usually inferred by the compiler, but can also be specified in code, by explicit type annotation
 
     // Example of type annotation for vectors
     // let letters = vec!['a', 'b', 'c'];
     // let numbers = vec![1, 2, 3];
+
+    // * Advanced Match
+    // enum Discount {
+    //     Percent(i32),
+    //     Flat(i32)
+    // }
+
+    // struct Ticket {
+    //     event: String,
+    //     price: i32
+    // }
+
+    // let n = 3;
+    // match n {
+    //     3 => println!("Three"),
+    //     // _ => println!("Not Three")
+    //     other  => println!("number: {:?}", other)
+    // }
+
+    // let flat = Discount::Flat(2);
+    // match flat {
+    //     Discount::Flat(2) => println!("flat 2"),
+    //     Discount::Flat(amount) => println!("flat discount of {:?}", amount),
+    //     _ => println!("no discount")
+    // }
+
+    // let concert = Ticket {
+    //     event: "concert".to_owned(),
+    //     price: 50
+    // };
+    // match concert {
+    //     Ticket {
+    //         price, ..
+    //     } => println!("price = {:?}", price)
+    // }
+
+    // Example
+    enum Ticket {
+        Backstage(f64, String),
+        Standard(f64),
+        Vip(f64, String),
+    }
+
+    let tickets = vec![
+        Ticket::Backstage(50.0, "Billy".to_owned()),
+        Ticket::Standard(25.0),
+        Ticket::Vip(100.0, "Nick".to_owned())
+    ];
+
+    for ticket in tickets {
+        match ticket {
+            Ticket::Backstage(price, name) => println!("Backstage ticket for {:?} costs {:?}", name, price),
+            Ticket::Standard(price) => println!("Standard ticket costs {:?}", price),
+            Ticket::Vip(price, name) => println!("VIP ticket for {:?} costs {:?}", name, price)
+        }
+    }
+
 
 
 }
