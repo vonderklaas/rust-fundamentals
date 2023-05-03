@@ -233,5 +233,17 @@ fn main() {
     // // Creating tuple
     // let (employee, access) = ("Jake", Access::Full);
     // println!("{:?} has full access!", employee);
-
+    
+    // Examples 
+    // fn cartesian_coordinate() -> (i32, i32) {
+    //     return (10, 10)
+    // }
+    // let (x, y) = cartesian_coordinate();
+    // if y > 5 {
+    //     println!("greater than 5")
+    // } else if y < 5 {
+    //     println!("less than 5")
+    // } else {
+    //     println!("equal to 5")
+    // }
 }
