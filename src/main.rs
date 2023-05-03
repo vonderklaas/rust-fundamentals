@@ -186,35 +186,52 @@ fn main() {
     //     Sweet,
     //     Fruity
     // }
-
     // struct Drink {
     //     flavor: Flavor,
     //     fluid_oz: f64
     // }
-
     // fn print_drink (drink: Drink) {
     //     match drink.flavor {
     //        Flavor::Sparkling => println!("sparkling"),
     //        Flavor::Sweet => println!("sweet"),
     //        Flavor::Fruity => println!("fruity")
     //     }
-
     //     println!("oz: {:?}", drink.fluid_oz);
     // }
-
     // let sweet_drink = Drink {
     //     flavor: Flavor::Sweet,
     //     fluid_oz: 6.0
     // };
-
-
     // let fruity_drink = Drink {
     //     flavor: Flavor::Fruity,
     //     fluid_oz: 4.0
     // };
-
     // print_drink(sweet_drink);
     // print_drink(fruity_drink);
 
+    // * Tuples
+    // A type of "record", to store data anonymously
+    // There is no need for name fields
+    // Useful to return pairs of data from functions
+    // Can be "destructed" easily into variables
+
+    // Examples
+    // enum Access {
+    //     Full,
+    // }
+    // // Returning tuple
+    // fn one_two_three() -> (i32, i32, i32) {
+    //     (1, 2, 3)
+    // }
+    // let numbers = one_two_three();
+    // // Destructuring
+    // let (x, y, z) = one_two_three();
+    // // Printing
+    // println!("{:?}, {:?}", x, numbers.0); // 1
+    // println!("{:?}, {:?}", y, numbers.1); // 2
+    // println!("{:?}, {:?}", z, numbers.2); // 3
+    // // Creating tuple
+    // let (employee, access) = ("Jake", Access::Full);
+    // println!("{:?} has full access!", employee);
 
 }
