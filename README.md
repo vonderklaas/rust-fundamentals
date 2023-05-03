@@ -34,6 +34,7 @@ _Rust_ helps developers write fast software that’s memory-efficient. It’s a 
 -   Expressions
 -   Memory, Addresses, Offsets
 -   Ownership Model (memory management)
+-   impl, self Keywords
 
 <br/>
 
@@ -76,3 +77,83 @@ display_page_rating(&book);
 Rust is quite different than JavaScript. JavaScript tries to find variables or objects not in use and automatically clears them from memory. This is called garbage collection. The language abstracts the developer from thinking about manual memory management. With Rust, developers have more control over memory allocation without it being as painful as C++.
 
 Rust uses a relatively unique memory management approach that incorporates the idea of memory ‘ownership’. Basically, Rust keeps track of who can read and write to memory. It knows when the program is using memory and immediately frees the memory once it is no longer needed. It enforces memory rules at compile-time, making it virtually impossible to have runtime memory bugs. You do not need to manually keep track of memory. The compiler takes care of it.
+
+Implementation
+
+Example 1
+
+```rust
+struct Temperature {
+    degrees_f: f64
+}
+impl Temperature {
+    // Self === Temperature
+    fn freezing() -> Self {
+        Self {
+            degrees_f: 32.0
+        }
+    }
+    fn show_temp(&self) {
+        println!("{:?} degrees F", self.degrees_f)
+    }
+}
+let hot = Temperature { degrees_f: 99.9 };
+hot.show_temp();
+let cold = Temperature::freezing();
+cold.show_temp();
+```
+
+Example 2
+
+```rust
+enum Color {
+    Brown,
+    Red
+}
+impl Color {
+    fn print(&self) {
+        match self {
+            Color::Brown => println!("Color is brown"),
+            Color::Red => println!("Color is red"),
+        }
+    }
+}
+struct Dimensions {
+    width: f64,
+    height: f64,
+    depth: f64
+}
+impl Dimensions {
+    fn print(&self) {
+        println!("width: {:?}", self.width);
+        println!("height: {:?}", self.height);
+        println!("depth: {:?}", self.depth);
+    }
+}
+struct ShippingBox {
+    color: Color,
+    weight: f64,
+    dimensions: Dimensions
+}
+impl ShippingBox {
+    fn new(weight: f64, color: Color,dimensions: Dimensions) -> Self {
+        Self {
+            weight,
+            color,
+            dimensions
+        }
+    }
+    fn print(&self) {
+        self.color.print();
+        self.dimensions.print();
+    }
+}
+
+let small_dimensions: Dimensions = Dimensions {
+    width: 1.0,
+    height: 2.0,
+    depth: 3.0
+};
+let small_box = ShippingBox::new(5.0, Color::Red, small_dimensions);
+small_box.print();
+```

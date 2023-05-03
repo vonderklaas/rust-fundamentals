@@ -371,5 +371,83 @@ fn main() {
     // display_quantity(&tomato);
     // display_id(&tomato);
 
+    // * impl, self keywords (implementation)
+    // Allows you to implement functionality on specific enumerations and structs
+    // Grealy ehnances organization of your code and makes programs easier to follow
+
+    // Example
+    // struct Temperature {
+    //     degrees_f: f64
+    // }
+    // impl Temperature {
+    //     // Self === Temperature
+    //     fn freezing() -> Self {
+    //         Self {
+    //             degrees_f: 32.0
+    //         }
+    //     }
+    //     fn show_temp(&self) {
+    //         println!("{:?} degrees F", self.degrees_f)
+    //     } 
+    // }
+    // let hot = Temperature { degrees_f: 99.9 };
+    // hot.show_temp();
+    // let cold = Temperature::freezing();
+    // cold.show_temp();
+
+    // Example
+    enum Color {
+        Brown,
+        Red
+    }
+    impl Color {
+        fn print(&self) {
+            match self {
+                Color::Brown => println!("Color is brown"),
+                Color::Red => println!("Color is red"),
+            }
+        }
+    }
+    struct Dimensions {
+        width: f64,
+        height: f64,
+        depth: f64
+    }
+    impl Dimensions {
+        fn print(&self) {
+            println!("width: {:?}", self.width);
+            println!("height: {:?}", self.height);
+            println!("depth: {:?}", self.depth);
+        }
+    }
+    struct ShippingBox {
+        color: Color,
+        weight: f64,
+        dimensions: Dimensions
+    }
+    impl ShippingBox {
+        fn new(weight: f64, color: Color,dimensions: Dimensions) -> Self {
+            Self {
+                weight,
+                color,
+                dimensions
+            }
+        }
+        fn print(&self) {
+            self.color.print();
+            self.dimensions.print();
+        }
+    }
+
+    let small_dimensions: Dimensions = Dimensions {
+        width: 1.0,
+        height: 2.0,
+        depth: 3.0
+    };
+    let small_box = ShippingBox::new(5.0, Color::Red, small_dimensions);
+    small_box.print();
+    
+
+
 
 }
