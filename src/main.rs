@@ -635,25 +635,25 @@ fn main() {
     // }
 
     // Example
-    enum Ticket {
-        Backstage(f64, String),
-        Standard(f64),
-        Vip(f64, String),
-    }
+    // enum Ticket {
+    //     Backstage(f64, String),
+    //     Standard(f64),
+    //     Vip(f64, String),
+    // }
 
-    let tickets = vec![
-        Ticket::Backstage(50.0, "Billy".to_owned()),
-        Ticket::Standard(25.0),
-        Ticket::Vip(100.0, "Nick".to_owned())
-    ];
+    // let tickets = vec![
+    //     Ticket::Backstage(50.0, "Billy".to_owned()),
+    //     Ticket::Standard(25.0),
+    //     Ticket::Vip(100.0, "Nick".to_owned())
+    // ];
 
-    for ticket in tickets {
-        match ticket {
-            Ticket::Backstage(price, name) => println!("Backstage ticket for {:?} costs {:?}", name, price),
-            Ticket::Standard(price) => println!("Standard ticket costs {:?}", price),
-            Ticket::Vip(price, name) => println!("VIP ticket for {:?} costs {:?}", name, price)
-        }
-    }
+    // for ticket in tickets {
+    //     match ticket {
+    //         Ticket::Backstage(price, name) => println!("Backstage ticket for {:?} costs {:?}", name, price),
+    //         Ticket::Standard(price) => println!("Standard ticket costs {:?}", price),
+    //         Ticket::Vip(price, name) => println!("VIP ticket for {:?} costs {:?}", name, price)
+    //     }
+    // }
 
 
 
