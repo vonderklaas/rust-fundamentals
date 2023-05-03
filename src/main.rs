@@ -1,3 +1,5 @@
+use std::collections::HashMap;
+
 
 
 fn main() {
@@ -757,5 +759,56 @@ fn main() {
     //     Err(err) => println!("err = {:?}", err)
     // }
     
+    // * Hashmap
+    // A hashmap is a data structure that stores key-value pairs
+    // - Keys are unique
+    // - Keys are used to access values
+    // - Keys are hashed to determine their location in memory
+
+    // Example
+    // let mut people = HashMap::new();
+    // // Insert
+    // people.insert("Susan", 21);
+    // people.insert("Ed", 13);
+    // people.insert("Will", 14);
+    // people.insert("Cathy", 22);
+    // // Remove
+    // people.remove("Ed");
+    // // Iterate
+    // match people.get("Ed") {
+    //     Some(age) => println!("Ed's age is {:?}", age),
+    //     None => println!("Ed not found")
+    // }
+    // for (person, age) in people.iter() {
+    //     println!("person = {:?}, age = {:?}", person, age);
+    // }
+    // for person in people.keys() {
+    //     println!("person = {:?}", person);
+    // }
+    // for age in people.values() {
+    //     println!("age = {:?}", age);
+    // }
+
+    // Example
+    // let mut stock = HashMap::new();
+    // stock.insert("Chairs", 5);
+    // stock.insert("Beds", 3);
+    // stock.insert("Tables", 2);
+    // stock.insert("Couches", 0);
+
+    // let mut total_stock = 0;
+
+    // for (item, quantity) in stock.iter() {
+    //     total_stock += quantity;
+    //     let stock_count  = if quantity == &0 {
+    //         "out of stock".to_owned();
+    //     } else {
+    //         format!("{:?}", quantity);
+    //     };
+    //     println!("{:?} = {:?}", item, stock_count);
+    // }
+
+    // println!("Total stock = {:?}", total_stock)
+
 
 }
