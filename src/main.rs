@@ -126,4 +126,25 @@ fn main() {
     //     _ => println!("First time here? Welcome!")
     // }
 
+    // * Enum
+    // Enumeration to work with data, that can be multiple posibilities
+    // Each posibility is called a "variant"
+    // Enum provides information about your program to the compiler
+    // More robust programs
+
+    // Example
+    // enum Color {
+    //     Red,
+    //     Green,
+    //     Blue
+    // }
+    // fn print_color (color: Color) {
+    //     match color {
+    //         Color::Red => println!("red"),
+    //         Color::Green => println!("green"),
+    //         Color::Blue => println!("blue")
+    //     }
+    // }
+    // print_color(Color::Blue);
+
 }
