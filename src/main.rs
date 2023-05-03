@@ -34,4 +34,24 @@ fn main() {
     // }
     // let total = add(2, 2);
     // print!("Total: {total}\n");
+
+    // * Macros
+    // Macros are similar to functions
+    // Exclamation symbol "!"" makes difference between macro and function
+    // Macros expand into additional code
+    // The println macro - "prints" information to the terminal
+    // Useful for debugging
+
+    // Examples
+    // let life = 42;
+    // println!("hello");
+    // // Take external value and include in the statement
+    // println!("{:?}", life);
+    // println!("{:?} {:?}", life, life * 2);
+    // println!("The meaning of life is {:?}", life);
+
+    // // Debugging / End User Display
+    // println!("{life:?}");
+    // println!("{life}");
+
 }
