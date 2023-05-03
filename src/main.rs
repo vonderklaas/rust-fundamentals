@@ -21,4 +21,17 @@ fn main() {
     // let mut my_name = "Nick";
     // let quit_program = false;
     // let your_half = my_half;
+
+    // * Functions
+    // A way to encapsulate program functionality
+    // Optionally accept data
+    // Optionally return data
+    // Utilized for code organization
+
+    // Examples
+    // fn add(a: i32, b: i32) -> i32 {
+    //     return a + b;
+    // }
+    // let total = add(2, 2);
+    // print!("Total: {total}\n");
 }
