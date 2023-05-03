@@ -39,6 +39,7 @@ _Rust_ helps developers write fast software that’s memory-efficient. It’s a 
 -   Strings
 -   Type Annotations & Generics
 -   Option Type (optional data)
+-   Documentation
 
 <br/>
 
@@ -225,3 +226,7 @@ match becky.age {
     None => println!("No age")
 }
 ```
+
+Documentation
+
+LINK HERE

@@ -688,5 +688,20 @@ fn main() {
     //     None => println!("No age")
     // }
 
+    // * Documentation
+    /// Represents a person 
+    enum Color {
+        Red,
+        Blue
+    }
+    /// Represents a person
+    struct Mail {
+        address: String
+    }
+    /// Sends an email to the specified address
+    fn add(a: i32, b: i32) -> i32 {
+        return a + b
+    }
+
 
 }
