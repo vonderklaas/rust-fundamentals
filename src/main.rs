@@ -49,9 +49,22 @@ fn main() {
     // println!("{:?}", life);
     // println!("{:?} {:?}", life, life * 2);
     // println!("The meaning of life is {:?}", life);
-
     // // Debugging / End User Display
     // println!("{life:?}");
     // println!("{life}");
+
+    // * Control Flow
+    // Code is executed line-by-line
+    // Actions are performed & control flow may change
+    // Specific conditions can change control flow: "if", "else", "else if"
+    // Try to always include "else" statement, unless there truly is no alternative case
+    
+    // Examples
+    // let age = 25;
+    // if age > 18 {
+    //     println!("Good, you can enter!")
+    // } else {
+    //     println!("Sorry, you can't enter!")
+    // }
 
 }
