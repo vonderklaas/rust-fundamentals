@@ -67,4 +67,27 @@ fn main() {
     //     println!("Sorry, you can't enter!")
     // }
 
+    // * Loops
+    // Repetetion is called looping or "iteration"
+    // Multiple types of loops:
+    // "loop" - infinite loop
+    // "while" - conditional loop
+
+    // Example (Loop)
+    // let mut counter = 0;
+    // loop {
+    //     if counter == 5 {
+    //         println!("Hit the stopping condition");
+    //         break;
+    //     }
+    //     println!("{:?}", counter);
+    //     counter += 1;
+    // }
+
+    // Example (While)
+    // while counter != 5 {
+    //     println!("{:?}", counter);
+    //     counter += 1;
+    // }
+
 }
