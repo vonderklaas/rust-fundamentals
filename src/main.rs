@@ -1,3 +1,5 @@
+
+
 fn main() {
     println!("Hello, world!");
 
@@ -396,58 +398,126 @@ fn main() {
     // cold.show_temp();
 
     // Example
-    enum Color {
-        Brown,
-        Red
-    }
-    impl Color {
-        fn print(&self) {
-            match self {
-                Color::Brown => println!("Color is brown"),
-                Color::Red => println!("Color is red"),
-            }
-        }
-    }
-    struct Dimensions {
-        width: f64,
-        height: f64,
-        depth: f64
-    }
-    impl Dimensions {
-        fn print(&self) {
-            println!("width: {:?}", self.width);
-            println!("height: {:?}", self.height);
-            println!("depth: {:?}", self.depth);
-        }
-    }
-    struct ShippingBox {
-        color: Color,
-        weight: f64,
-        dimensions: Dimensions
-    }
-    impl ShippingBox {
-        fn new(weight: f64, color: Color,dimensions: Dimensions) -> Self {
-            Self {
-                weight,
-                color,
-                dimensions
-            }
-        }
-        fn print(&self) {
-            self.color.print();
-            self.dimensions.print();
-        }
-    }
+    // enum Color {
+    //     Brown,
+    //     Red
+    // }
+    // impl Color {
+    //     fn print(&self) {
+    //         match self {
+    //             Color::Brown => println!("Color is brown"),
+    //             Color::Red => println!("Color is red"),
+    //         }
+    //     }
+    // }
+    // struct Dimensions {
+    //     width: f64,
+    //     height: f64,
+    //     depth: f64
+    // }
+    // impl Dimensions {
+    //     fn print(&self) {
+    //         println!("width: {:?}", self.width);
+    //         println!("height: {:?}", self.height);
+    //         println!("depth: {:?}", self.depth);
+    //     }
+    // }
+    // struct ShippingBox {
+    //     color: Color,
+    //     weight: f64,
+    //     dimensions: Dimensions
+    // }
+    // impl ShippingBox {
+    //     fn new(weight: f64, color: Color,dimensions: Dimensions) -> Self {
+    //         Self {
+    //             weight,
+    //             color,
+    //             dimensions
+    //         }
+    //     }
+    //     fn print(&self) {
+    //         self.color.print();
+    //         self.dimensions.print();
+    //     }
+    // }
 
-    let small_dimensions: Dimensions = Dimensions {
-        width: 1.0,
-        height: 2.0,
-        depth: 3.0
-    };
-    let small_box = ShippingBox::new(5.0, Color::Red, small_dimensions);
-    small_box.print();
+    // let small_dimensions: Dimensions = Dimensions {
+    //     width: 1.0,
+    //     height: 2.0,
+    //     depth: 3.0
+    // };
+    // let small_box = ShippingBox::new(5.0, Color::Red, small_dimensions);
+    // small_box.print();
     
+    // * Vectors (Data Structure)
+    // Multiple pieces of data, data of the same type
+    // Used for lists of information
+    // Can add, remove, and traverse the entries
 
+    // Examples
+
+    // Alternatives
+    // let my_numbers = vec![1, 2, 3];
+    // let mut my_numbers = Vec::new();
+    // my_numbers.push(1);
+    // my_numbers.push(2);
+    // my_numbers.push(3);
+    // my_numbers.pop();
+    // my_numbers.len(); // 2
+    // let two = my_numbers[1];
+    // println!("{:?}", two);
+
+    // Iterating
+    // let my_numbers = vec![1, 2, 3];
+    // for num in my_numbers {
+    //     println!("{:?}", num);
+    // }
+
+    // Recap
+    // Vectors contain multiple pieces of similar data
+    // Data can be added or removed
+    // The vec! macro can be used to create vectors
+    // Use for..in to iterate through items of a vector
+
+    // Example
+    // struct Test {
+    //     score: i32
+    // }
+    // let my_scores = vec![
+    //     Test {
+    //         score: 90
+    //     },
+    //     Test {
+    //         score: 77
+    //     },
+    //     Test {
+    //         score: 83
+    //     }
+    // ];
+    // let mut total: i32 = 0;
+    // for score in my_scores {
+    //     total += score.score;
+    // }
+    // println!("Total is {:?}", total);
+    // println!("Average is {:?}", total / 3);
+
+    // Example
+    // let numbers = vec![10, 20, 30, 40];
+    // for number in numbers {
+
+    //     // "if", "else"
+    //     // if number == 30 {
+    //     //     println!("Thirty");
+    //     // } else {
+    //     //     println!("{:?}", number);
+    //     // }
+
+    //     // "match"
+    //     match number {
+    //         30 => println!("Thirty"),
+    //         _ => println!("{:?}", number)
+    //     }
+    // }
 
 
 }

@@ -35,6 +35,7 @@ _Rust_ helps developers write fast software that’s memory-efficient. It’s a 
 -   Memory, Addresses, Offsets
 -   Ownership Model (memory management)
 -   impl, self Keywords
+-   Vectors
 
 <br/>
 
