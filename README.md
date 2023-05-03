@@ -37,9 +37,11 @@ _Rust_ helps developers write fast software that’s memory-efficient. It’s a 
 -   impl, self Keywords
 -   Vectors
 -   Strings
+-   Documentation
 -   Type Annotations & Generics
 -   Option Type (optional data)
--   Documentation
+-   Result Type (success, error)
+-   Hashmap
 
 <br/>
 
@@ -206,6 +208,10 @@ for person in people {
 }
 ```
 
+Documentation
+
+![DOCUMENTATION](https://github.com/garbalau-github/rust-fundamentals/blob/main/screenshots/DOCUMENTATION.png?raw=true)
+
 Option Type
 
 ```rust
@@ -227,6 +233,32 @@ match becky.age {
 }
 ```
 
-Documentation
+Result Type
 
-![DOCUMENTATION](https://github.com/garbalau-github/rust-fundamentals/blob/main/screenshots/DOCUMENTATION.png?raw=true)
+```rust
+#[derive(Debug)]
+enum MenuChoice {
+    MainMenu,
+    Start,
+    Quit
+}
+
+fn get_choice(input: &str) -> Result<MenuChoice, String> {
+    match input {
+        "mainmenu" => Ok(MenuChoice::MainMenu),
+        "start" => Ok(MenuChoice::Start),
+        "quit" => Ok(MenuChoice::Quit),
+        _ => Err("Not a valid choice".to_owned())
+    }
+}
+
+fn print_choice(choice: &MenuChoice) {
+    println!("choice = {:?}", choice);
+}
+
+let choice: Result<MenuChoice, _> = get_choice("start");
+match choice {
+    Ok(choice) => print_choice(&choice),
+    Err(err) => println!("err = {:?}", err)
+}
+```

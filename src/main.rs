@@ -700,7 +700,62 @@ fn main() {
     // /// Sends an email to the specified address
     // fn add(a: i32, b: i32) -> i32 {
     //     return a + b
+    //
+
+    // * Result
+    // Work with functions that may fail under certain conditions
+    // And how Result data type may be used to handle these failures
+    // Result is a data type that contains two types of data: "Success" and "Error" data
+    // It is used in scenarios where an action needs to be taken, but has the posibility of faliure
+    // For example: copying a file (perhaps it was deleted before), connecting to a website (the network is done)
+
+    // Definition
+    // enum Result<T, E> {
+    //     Ok(T),
+    //     Err(E)
     // }
 
+    // Example
+    // fn get_sound(name: &str) -> Result<SoundData, String> {
+    //     if name == "alert" {
+    //         Ok(SoundData::new("alert"));
+    //     } else {
+    //         Err("Sound not found".to_owned());
+    //     }
+    // }
+
+    // let sound = get_sound("alert");
+    // match sound {
+    //     Ok(sound) => println!("sound = {:?}", sound),
+    //     Err(err) => println!("err = {:?}", err)
+    // }
+
+    // Example
+    // #[derive(Debug)]
+    // enum MenuChoice {
+    //     MainMenu,
+    //     Start,
+    //     Quit
+    // }
+
+    // fn get_choice(input: &str) -> Result<MenuChoice, String> {
+    //     match input {
+    //         "mainmenu" => Ok(MenuChoice::MainMenu),
+    //         "start" => Ok(MenuChoice::Start),
+    //         "quit" => Ok(MenuChoice::Quit),
+    //         _ => Err("Not a valid choice".to_owned())
+    //     }
+    // }
+
+    // fn print_choice(choice: &MenuChoice) {
+    //     println!("choice = {:?}", choice);
+    // }
+
+    // let choice: Result<MenuChoice, _> = get_choice("start");
+    // match choice {
+    //     Ok(choice) => print_choice(&choice),
+    //     Err(err) => println!("err = {:?}", err)
+    // }
+    
 
 }
