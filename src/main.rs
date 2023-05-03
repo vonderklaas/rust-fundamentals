@@ -273,4 +273,23 @@ fn main() {
     // };
     // println!("{:?}", message);
 
+    // * Memory, Adresses, Offsets
+    // Memory is stored using binary bits: 0 or 1
+    // Computer optimized for bytes: 1 byte - 8 contiguous bits
+    // All data in memory has an "address"
+
+    // Address is used to locate data
+    // Address is always the same, only data changes
+    // Usually we don't utilize addresses directly, variables handle most of the work
+
+    // Items can be located at an address using an "offset"
+    // "Offset" begin at 0, represents the number of bytes away from the original address,
+    // usually we don't deal with "offsets" directly, we deal with the indexes instead,
+    // and compiler will calculate for us how many bytes are we away from the original address
+
+    // Recap:
+    // Memory uses addresses & offsets
+    // Addresses are permanent, only data differs
+    // Offsets can be used to "index" into some data
+
 }
