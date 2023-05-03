@@ -233,7 +233,7 @@ fn main() {
     // // Creating tuple
     // let (employee, access) = ("Jake", Access::Full);
     // println!("{:?} has full access!", employee);
-    
+
     // Examples 
     // fn cartesian_coordinate() -> (i32, i32) {
     //     return (10, 10)
@@ -246,4 +246,31 @@ fn main() {
     // } else {
     //     println!("equal to 5")
     // }
+
+    // * Expressions
+    // Rust is an expression based language
+    // Most things are evaluated and return some value
+    // Expression values coalesce to a single point
+    // Can be used for nested logic
+
+    // Example
+    // let my_num = 3;
+    // Expression
+    // let is_lt_5 = if my_num < 5 {
+    //     true
+    // } else {
+    //     false
+    // };
+    // Shorter Expression
+    // let is_lt_5 = my_num < 5;
+    // println!("{:?}", is_lt_5);
+
+    // Example
+    // let my_num = 3;
+    // let message = match my_num {
+    //     1 => "Hello!",
+    //     _ => "Undefined"
+    // };
+    // println!("{:?}", message);
+
 }
