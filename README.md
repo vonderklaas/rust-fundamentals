@@ -33,3 +33,13 @@ _Rust_ helps developers write fast software that’s memory-efficient. It’s a 
 -   Tuples (destructuring)
 -   Expressions
 -   Memory, Addresses, Offsets
+
+<br/>
+
+### Additional Charts
+
+<br/>
+
+Memory, Addresses, Offsets
+
+![MEMORY](https://github.com/garbalau-github/rust-tutorial/blob/main/screenshots/MEMORY.png?raw=true)
