@@ -90,4 +90,40 @@ fn main() {
     //     counter += 1;
     // }
 
+    // * Match expresions
+    // They are used to add logic to your programs
+    // Similar to "if", "else"
+    // However, the difference is that "Match" all options must be accounted for
+
+    // Example (bool)
+    // let some_bool = true;
+    // match some_bool {
+    //     true => println!("It's true"),
+    //     false => println!("It's false")
+    // }
+
+    // Example (int)
+    // let some_int = 3;
+    // match some_int {
+    //     1 => println!("It's 1"), 
+    //     2 => println!("It's 2"), 
+    //     3 => println!("It's 3"),
+    //     _ => println!("It's something else"), 
+    // }
+
+    // Match vs "if", "else"
+    // Match will be checked by the compiler:
+    // - if a new posibility is added, you will be notified
+    // "if", "else" is NOT checked by the compiler:
+    // - if a new posibility is added, your code may contain a bug
+
+    // Example decisions with Match
+    // let my_name = "Nick";
+    // match my_name {
+    //     "Nick" => println!("That is my name"),
+    //     "Bob" => println!("That is NOT my name"),
+    //     "Alice" => println!("Oh, hello Alice"),
+    //     _ => println!("First time here? Welcome!")
+    // }
+
 }
