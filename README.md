@@ -1,4 +1,4 @@
-### Rust Tutorial
+### Rust Fundamentals
 
 _Rust_ helps developers write fast software that’s memory-efficient. It’s a modern replacement for languages like C++ or C with a focus on code safety and concise syntax.
 
