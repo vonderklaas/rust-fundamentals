@@ -38,6 +38,7 @@ _Rust_ helps developers write fast software that’s memory-efficient. It’s a 
 -   Vectors
 -   Strings
 -   Type Annotations & Generics
+-   Option Type (optional data)
 
 <br/>
 
@@ -201,5 +202,26 @@ for person in people {
         print_name(&person.name);
         print_color(&person.color);
     }
+}
+```
+
+Option Type
+
+```rust
+struct Customer {
+    age: Option<i32>,
+    email: String
+}
+let mark = Customer {
+    age: Some(30),
+    email: String::from("mark@gmail.com")
+};
+let becky = Customer {
+    age: None,
+    email: String::from("becky@gmail.com")
+};
+match becky.age {
+    Some(age) => println!("age = {:?}", age),
+    None => println!("No age")
 }
 ```

@@ -655,6 +655,38 @@ fn main() {
     //     }
     // }
 
+    // * Option
+    // Option is a type that represents a value that may or may not exist
+    // Option<T> is either Some(T) or None
+    // Used in scenarios where data may not be required or is unavailable
+    // - Unable to find something
+    // - Ran out of items in a list
+    // - Form field not filled out
+
+    // Examples
+    // Definition of Option
+    // enum Option<T> {
+    //     Some(T),
+    //     None
+    // }
+
+    // Example
+    // struct Customer {
+    //     age: Option<i32>,
+    //     email: String
+    // }
+    // let mark = Customer {
+    //     age: Some(30),
+    //     email: String::from("mark@gmail.com")
+    // };
+    // let becky = Customer {
+    //     age: None,
+    //     email: String::from("becky@gmail.com")
+    // };
+    // match becky.age {
+    //     Some(age) => println!("age = {:?}", age),
+    //     None => println!("No age")
+    // }
 
 
 }
