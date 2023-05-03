@@ -519,5 +519,80 @@ fn main() {
     //     }
     // }
 
+    // * Strings
+    // Strings are used to store text information
+    // Two commonly string types: String (owned) and &str (borrowed)
+    // Must use an owned String to store in a struct
+    // Use &str for function parameters
+
+    // Example (pass it to a function)
+    // fn print_it(data: &str) {
+    //     println!("{:?}", data);
+    // }
+    // // Automaticly borrowed
+    // print_it("Hello World");
+    // // Create our own string
+    // let owned_string = "owned_string".to_owned();
+    // let another_string = String::from("Hello World");
+    // print_it(&owned_string);
+    // print_it(&another_string);
+
+    // Example (struct)
+    // struct Employee {
+    //     // Doesn't work
+    //     // name: &str,
+    //     name: String
+    // }
+    // let emp_name = String::from("Nick");
+    // let emp = Employee {
+    //     name: emp_name
+    // };
+
+    // Recap
+    // Strings are automaticly borrowed
+    // Use .to_owned() or String::from() to create an owned String
+    // Use &str for function parameters
+    // Use String for struct fields 
+
+    // Example
+    // struct Person {
+    //     age: i32,
+    //     name: String,
+    //     color: String
+    // }
+
+    // let people = vec![
+    //     Person {
+    //         age: 5,
+    //         name: String::from("Nick"),
+    //         color: String::from("Blue")
+    //     },
+    //     Person {
+    //         age: 7,
+    //         name: String::from("John"),
+    //         color: String::from("Red")
+    //     },
+    //     Person {
+    //         age: 22,
+    //         name: String::from("Sally"),
+    //         color: String::from("Green")
+    //     }
+    // ];
+
+    // fn print_name(name: &str) {
+    //     println!("name = {:?}", name);
+    // }
+
+    // fn print_color(color: &str) {
+    //     println!("color = {:?}", color);
+    // }
+
+    // for person in people {
+    //     if person.age <= 10 {
+    //         print_name(&person.name);
+    //         print_color(&person.color);
+    //     }
+    // }
+
 
 }

@@ -36,6 +36,7 @@ _Rust_ helps developers write fast software that’s memory-efficient. It’s a 
 -   Ownership Model (memory management)
 -   impl, self Keywords
 -   Vectors
+-   Strings
 
 <br/>
 
@@ -157,4 +158,47 @@ let small_dimensions: Dimensions = Dimensions {
 };
 let small_box = ShippingBox::new(5.0, Color::Red, small_dimensions);
 small_box.print();
+```
+
+Strings
+
+```rust
+struct Person {
+    age: i32,
+    name: String,
+    color: String
+}
+
+let people = vec![
+    Person {
+        age: 5,
+        name: String::from("Nick"),
+        color: String::from("Blue")
+    },
+    Person {
+        age: 7,
+        name: String::from("John"),
+        color: String::from("Red")
+    },
+    Person {
+        age: 22,
+        name: String::from("Sally"),
+        color: String::from("Green")
+    }
+];
+
+fn print_name(name: &str) {
+    println!("name = {:?}", name);
+}
+
+fn print_color(color: &str) {
+    println!("color = {:?}", color);
+}
+
+for person in people {
+    if person.age <= 10 {
+        print_name(&person.name);
+        print_color(&person.color);
+    }
+}
 ```
