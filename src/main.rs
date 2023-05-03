@@ -292,4 +292,84 @@ fn main() {
     // Addresses are permanent, only data differs
     // Offsets can be used to "index" into some data
 
+    // * Ownership
+    // Ownership is what allows Rust to execute code in a performant manner,
+    // and helps to ensure that compiled code executes correctly under various circumstances
+    
+    // Managing Memory
+    // Programs must track memory, if they fail to do so, a "leak" occurs
+    // Rust utilizes "Owernship" model to manage memory, where the "owner"
+    // of memory is responsible for cleaning up the memory
+    // Memory can be either "moved" or "borrowed" from the owner
+
+    // Example (memory moved)
+    // enum Light {
+    //     Bright,
+    //     Dull
+    // }
+
+    // Error with moving "dull" into function twice
+    // fn display_light(light: Light) {
+    // -- Borrow instead of moving
+    // fn display_light(light: &Light) {
+    //     match light {
+    //         Light::Bright => println!("Light is bright"),
+    //         Light::Dull => println!("Light is dull"),
+    //     }
+        // Invisibly remove "dull" from memory
+    // }
+
+    // let dull = Light::Dull;
+    // Since we call display_light twice, the program will not compile
+    // display_light(dull);
+    // display_light(dull);
+    // -- Borrow instead of moving
+    // display_light(&dull);
+    // display_light(&dull);
+
+    // Recap
+    // Memory must be managed in some way to prevent leaks
+    // Rust uses "ownership" model to accomplish memory management
+    // - The "owner" of data must clean up the memory
+    // - This occurs automatically at the end of the scope
+    // Default behaviour is to "move" memory to a new owner
+    // - Use an ampersand (&) to allow code to "borrow" memory
+
+    // Code Example
+    // struct Book {
+    //     pages: i32,
+    //     rating: i32,
+    // }
+    // fn display_page_count(book: &Book) {
+    //     println!("pages = {:?}", book.pages);
+    // }
+    // fn display_page_rating(book: &Book) {
+    //     println!("rating = {:?}", book.rating);
+    // }
+    // let book = Book {
+    //     pages: 200,
+    //     rating: 5
+    // };
+    // display_page_count(&book);
+    // display_page_rating(&book);
+
+    // Example
+    // struct GroceryItem {
+    //     quantity: i32,
+    //     id: i32
+    // }
+    // fn display_quantity(item: &GroceryItem) {
+    //     println!("quantity = {:?}", item.quantity);
+    // }
+    // fn display_id(item: &GroceryItem) {
+    //     println!("id = {:?}", item.id);
+    // }
+    // let tomato: GroceryItem = GroceryItem {
+    //     quantity: 100,
+    //     id: 42
+    // };
+    // display_quantity(&tomato);
+    // display_id(&tomato);
+
+
 }
