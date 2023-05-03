@@ -147,4 +147,74 @@ fn main() {
     // }
     // print_color(Color::Blue);
 
+    // * Struct
+    // Structure is a type that contains multiple pieces of data
+    // Each of piece of data within struct must be populated
+    // Each piece of data is called a "field"
+    // Makes working with data easier, similar data can be grouped together
+
+    // Example One
+    // struct ShippingBox {
+    //     depth: i32,
+    //     width: i32,
+    //     height: i32,
+    // }
+    // let my_box = ShippingBox {
+    //     depth: 3,
+    //     width: 2,
+    //     height: 5
+    // };
+    // // Access inidividual field (by a dot ".")
+    // let tall = my_box.height;
+    // println!("the box is {:?} units tall", tall);
+
+    // Example Two
+    // struct GroceryItem {
+    //     stock: i32,
+    //     price: f32
+    // }
+    // let cereal = GroceryItem {
+    //     stock: 10,
+    //     price: 2.99
+    // };
+    // println!("stock: ${:?}", cereal.stock);
+    // println!("price: ${:?}", cereal.price);
+
+    // Example Three
+    // enum Flavor {
+    //     Sparkling,
+    //     Sweet,
+    //     Fruity
+    // }
+
+    // struct Drink {
+    //     flavor: Flavor,
+    //     fluid_oz: f64
+    // }
+
+    // fn print_drink (drink: Drink) {
+    //     match drink.flavor {
+    //        Flavor::Sparkling => println!("sparkling"),
+    //        Flavor::Sweet => println!("sweet"),
+    //        Flavor::Fruity => println!("fruity")
+    //     }
+
+    //     println!("oz: {:?}", drink.fluid_oz);
+    // }
+
+    // let sweet_drink = Drink {
+    //     flavor: Flavor::Sweet,
+    //     fluid_oz: 6.0
+    // };
+
+
+    // let fruity_drink = Drink {
+    //     flavor: Flavor::Fruity,
+    //     fluid_oz: 4.0
+    // };
+
+    // print_drink(sweet_drink);
+    // print_drink(fruity_drink);
+
+
 }
